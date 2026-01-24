@@ -8,7 +8,7 @@ pipeline {
         }
          stage('build-stage') {
             steps {
-                sh '/opt/maven/bin/mvn clean package'
+                sh '/opt/maven/bin/mvn sonar:sonar'
             }
         }
          stage('test-stage') {
