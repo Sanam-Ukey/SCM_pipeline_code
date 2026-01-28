@@ -22,6 +22,14 @@ pipeline {
                  //     -Dsonar.login=19fdca4e72f16ff41dd126cec2dda68d2735e43c'''
             }
         }
+        stage('quality-stage') {
+            steps {
+                timeout(2) {
+    
+            }
+                waitForQualityGate true
+            }
+        }
          stage('deploy-stage') {
             steps {
                 echo 'code deploy sucessfully'
