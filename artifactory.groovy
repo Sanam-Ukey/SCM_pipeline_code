@@ -30,7 +30,7 @@ pipeline {
                 waitForQualityGate true
             }
         }
-           stage('Artifatory-stage') {
+           stage('Artifactory-stage') {
             steps {
                sh 'aws s3 cp target/studentapp-2.2-SNAPSHOT.war s3://bucket-artifact-0987/'
             }
